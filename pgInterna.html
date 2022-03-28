@@ -1,0 +1,188 @@
+<?php
+session_start();
+?>
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <!-- Meta de caracteres -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/Logo PNG (1).png" type="image/x-icon">
+        <!-- Compiled and minified CSS Materialize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--  Import do Font Awesome  -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <title>Home</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.carousel');
+                var instances = M.Carousel.init(elems)({
+                    fullWidth: true,
+                    indicators: true
+                });
+            });
+        </script>
+
+        <style>
+            body {
+                background-color: #0039a6;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+                <a class="brand-logo">
+                    <img src="img/Open-unifeob.png" alt="Logo Unifeob" height="60px" width="260px">
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        Bem-Vindo
+                        <li><a href="index.html" class="waves-effect waves-light btn indigo darken-3">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class="center-align white-text">Open Unifeob</h1>
+        <hr>
+        <div class="carousel carousel-slider" style="height: 900px">
+            <a class="carousel-item"><img src="https://multivix.edu.br/wp-content/uploads/2021/04/faculdade-de-agronomia.jpg"></a>
+            <a class="carousel-item"><img src="https://www.promad.adv.br/blog/wp-content/uploads/2019/03/Advogado-concilie-a-sua-vida-profissional-e-pessoal.jpg"></a>
+            <a class="carousel-item"><img src="https://cdn2.hubspot.net/hubfs/3960387/medicina%20veterin%C3%A1ria-2.jpg"></a>
+            <a class="carousel-item"><img src="https://www.paulistaenfermagem.com.br/wp-content/uploads/2020/05/imagem_curso_02-1200x675.jpg"></a>
+        </div>
+        <hr>
+
+
+        <div class="container">
+            <h2 class="center-align white-text">Nossa Equipe!</h2>
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="card z-depth-3">
+                            <div class="card-image">
+                                <img src="img/Mauro.jpg">
+                                <span class="card-title">Mauro Gloria Junior</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Professor de Análise e Desenvolvimento de Sistemas.</p>
+                                <p>Mestre em PHP e UX.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card z-depth-3">
+                            <div class="card-image">
+                                <img src="img/Max.jpg"><span class="card-title">Max Vallim</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Professor de Análise e Desenvolvimento de Sistemas.</p>
+                                <p>Contador e Diretor Geral na empresa Fiscon Contabilidade.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="card z-depth-3">
+                            <div class="card-image">
+                                <img src="img/Marudi.jpg">
+                                <span class="card-title">Rodrigo Marudi</span>
+                            </div>
+                            <div class="card-content">
+                                <p>Professor de Análise e Desenvolvimento de Sistemas.</p>
+                                <p>Organizador do GDG de São João da Boa Vista.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="col s12 m4">
+                                <div class="card z-depth-3">
+                                    <div class="card-image">
+                                        <img src="img/Sidney.jpg">
+                                        <span class="card-title">Sidney Gitcoff Telles</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Professor de Análise e Desenvolvimento de Sistemas.</p>
+                                        <p>Ex roadie da banda do grande Robinho Jesus (Horizon Key) e agora jogador de airsoft.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card z-depth-3">
+                                    <div class="card-image">
+                                        <img src="img/Dirceu.jpg">
+                                        <span class="card-title">Dirceu Fernandes</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Diretor da escola de negócios da UNIFEOB.</p>
+                                        <p>Ciclista.</p>
+                                        <p>Mestre em administração.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4">
+                                <div class="card z-depth-3">
+                                    <div class="card-image">
+                                        <img src="img/Caio.jpg">
+                                        <span class="card-title">Caio Barbosa</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Estudante de Análise e Desenvolvimento de Sistemas.</p>
+                                        <p>Mentor da turma de ADS módulo 4.</p>
+                                        <p>Brabo no Figma.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
+        <footer class="page-footer indigo darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Sobre o site</h5>
+                        <p class="grey-text text-lighten-4">Este site está foi criado com o princípio de um aluno ensinar outro aluno.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Redes Sociais</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/unifeob_oficial/" target="_blank">Instagram</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/unifeob" target="_blank">Facebook</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://twitter.com/unifeob" target="_blank">Twitter</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/school/unifeob" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2021 Team Bravo Copyright
+                    <a class="grey-text text-lighten-4 right">Aula do Marudi</a>
+                </div>
+            </div>
+            </div>
+            </div>
+        </footer>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+
+    </html>

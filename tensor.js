@@ -6,6 +6,8 @@ const URL = "https://teachablemachine.withgoogle.com/models/Z16z_Bhls/";
 
 let model, webcam, labelContainer, maxPredictions;
 
+const btn = document.getElementById('btn');
+
 // Load the image model and setup the webcam
 async function init() {
     const modelURL = URL + "model.json";
@@ -20,15 +22,16 @@ async function init() {
 
     // Convenience function to setup a webcam
     const flip = true; // whether to flip the webcam
-    webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+    webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
     await webcam.setup(); // request access to the webcam
     await webcam.play();
     window.requestAnimationFrame(loop);
 
     // append elements to the DOM
     document.getElementById("webcam-container").appendChild(webcam.canvas);
+    webcam.canvas ? changeBtnCamera() : btn.disabled = false;
     labelContainer = document.getElementById("label-container");
-    for (let i = 0; i < (maxPredictions - 1); i++) { // and class labels
+    for (let i = 0; i < maxPredictions; i++) { // and class labels
         labelContainer.appendChild(document.createElement("div"));
     }
 }
@@ -44,11 +47,16 @@ async function predict() {
     // predict can take in an image, video or canvas html element
     const prediction = await model.predict(webcam.canvas);
     for (let i = 0; i < maxPredictions; i++) {
-        if (prediction[i].probability >= 1) {
-            const classPrediction = prediction[i].className 
-            //+ ": " + prediction[i].probability.toFixed(2);
+        if (prediction[i].probability >= 0.90) {
+            window.location.href = "http://www.devmedia.com.br";
+            //const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
-        /} else
-            //labelContainer.childNodes[i].innerHTML = "-";
+        } else
+            labelContainer.childNodes[i].innerHTML = "-";
     }
+}
+
+const changeBtnCamera = () => {
+    btn.disabled = true;
+    btn.classList.add('desativado');
 }
